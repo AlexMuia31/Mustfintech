@@ -9,12 +9,10 @@ const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
-    <>
-      <Box>
-        <Container maxWidth="xl" disableGutters={true}>
-          <LandingTabs />
-        </Container>
-      </Box>
-    </>
+    <Box>
+      <Container maxWidth={false} disableGutters={true}>
+        <LandingTabs />
+      </Container>
+    </Box>
   );
 }
