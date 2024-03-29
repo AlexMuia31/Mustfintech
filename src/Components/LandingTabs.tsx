@@ -69,7 +69,7 @@ function CustomTabPanel(props: TabPanelProps) {
 }
 
 const LandingTabs = () => {
-  const [value, setValue] = React.useState(1);
+  const [value, setValue] = React.useState(0);
 
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
     setValue(newValue);
@@ -79,7 +79,7 @@ const LandingTabs = () => {
   const isUpMd = useMediaQuery(theme.breakpoints.up("md"));
 
   return (
-    <Box sx={{ width: "100%" }}>
+    <Box sx={{ width: "100%", maxWidth: 1170 }}>
       <Box sx={{ bgcolor: "#fff" }}>
         <AntTabs
           value={value}

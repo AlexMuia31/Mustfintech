@@ -9,8 +9,11 @@ const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
-    <Box>
-      <Container maxWidth={false} disableGutters={true}>
+    <Box sx={{ background: "#F4F4F5" }}>
+      <Container
+        maxWidth="xl"
+        sx={{ display: "flex", justifyContent: "center" }}
+      >
         <LandingTabs />
       </Container>
     </Box>
