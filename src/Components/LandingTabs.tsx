@@ -79,7 +79,7 @@ const LandingTabs = () => {
   const isUpMd = useMediaQuery(theme.breakpoints.up("md"));
 
   return (
-    <Box sx={{ width: "100%", maxWidth: 1170 }}>
+    <Box sx={{ width: "100%" }}>
       <Box sx={{ bgcolor: "#fff" }}>
         <AntTabs
           value={value}

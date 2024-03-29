@@ -11,6 +11,7 @@ import { StyledCheck } from "./StyledCheck";
 import TableChip from "./TableChip";
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
+  borderRight: "1px solid #fff",
   [`&.${tableCellClasses.head}`]: {
     backgroundColor: "#EBEEF3",
     color: "#222222",
@@ -37,15 +38,16 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
 
 function createData(
   checkbox: JSX.Element,
-  id: number,
-  name: string,
-  calories: string,
+  id: any,
+  name: any,
+  calories: any,
   document: JSX.Element,
-  fat: string,
-  carbs: string,
-  protein: string
+  fat: any,
+  carbs: any,
+  protein: any,
+  last: any
 ) {
-  return { checkbox, id, name, calories, document, fat, carbs, protein };
+  return { checkbox, id, name, calories, document, fat, carbs, protein, last };
 }
 
 const rows = [
@@ -55,9 +57,10 @@ const rows = [
     "소득적격",
     " 개인전문",
     <TableChip />,
+    "2023-01-10 09:00:00",
     6.0,
-    24,
-    4.0
+    " ",
+    " "
   ),
   createData(
     <StyledCheck />,
@@ -65,9 +68,10 @@ const rows = [
     "소득적격",
     "개인전문",
     <TableChip />,
+    "2023-01-10 09:00:00",
     9.0,
-    37,
-    4.3
+    "서류 식별 불가 금융투자업자에 계좌를 개설한지 1년 미만으로 전문투자자 승인 불가",
+    "2023-01-10 09:00:00"
   ),
   createData(
     <StyledCheck />,
@@ -75,9 +79,10 @@ const rows = [
     "소득적격",
     "소득적격",
     <TableChip />,
+    "2023-01-10 09:00:00",
     16.0,
-    24,
-    6.0
+    "",
+    "2023-01-10 09:00:00"
   ),
   createData(
     <StyledCheck />,
@@ -85,9 +90,10 @@ const rows = [
     "소득적격",
     "개인전문",
     <TableChip />,
+    "2023-01-10 09:00:00",
     3.7,
-    67,
-    4.3
+    "",
+    ""
   ),
   createData(
     <StyledCheck />,
@@ -95,9 +101,10 @@ const rows = [
     "소득적격",
     "개인전문",
     <TableChip />,
+    "2023-01-10 09:00:00",
     16.0,
-    49,
-    3.9
+    "서류 식별 불가 금융투자업자에 계좌를 개설한지 1년 미만으로 전문투자자 승인 불가",
+    "2023-01-10 09:00:00"
   ),
   createData(
     <StyledCheck />,
@@ -105,9 +112,10 @@ const rows = [
     "소득적격",
     "소득적격",
     <TableChip />,
+    "2023-01-10 09:00:00",
     6.0,
-    24,
-    4.0
+    "",
+    "2023-01-10 09:00:00"
   ),
   createData(
     <StyledCheck />,
@@ -115,9 +123,10 @@ const rows = [
     "소득적격",
     "개인전문",
     <TableChip />,
+    "2023-01-10 09:00:00",
     9.0,
-    37,
-    4.3
+    "",
+    ""
   ),
   createData(
     <StyledCheck />,
@@ -125,9 +134,10 @@ const rows = [
     "소득적격",
     "개인전문",
     <TableChip />,
+    "2023-01-10 09:00:00",
     16.0,
-    24,
-    6.0
+    "서류 식별 불가 금융투자업자에 계좌를 개설한지 1년 미만으로 전문투자자 승인 불가",
+    "2023-01-10 09:00:00"
   ),
   createData(
     <StyledCheck />,
@@ -135,9 +145,10 @@ const rows = [
     "소득적격",
     "소득적격",
     <TableChip />,
+    "2023-01-10 09:00:00",
     3.7,
-    67,
-    4.3
+    "",
+    "2023-01-10 09:00:00"
   ),
   createData(
     <StyledCheck />,
@@ -145,9 +156,10 @@ const rows = [
     "소득적격",
     "개인전문",
     <TableChip />,
+    "2023-01-10 09:00:00",
     16.0,
-    49,
-    3.9
+    "",
+    ""
   ),
   createData(
     <StyledCheck />,
@@ -155,9 +167,10 @@ const rows = [
     "소득적격",
     "개인전문",
     <TableChip />,
+    "2023-01-10 09:00:00",
     6.0,
-    24,
-    4.0
+    "서류 식별 불가 금융투자업자에 계좌를 개설한지 1년 미만으로 전문투자자 승인 불가",
+    "2023-01-10 09:00:00"
   ),
   createData(
     <StyledCheck />,
@@ -165,9 +178,10 @@ const rows = [
     "소득적격",
     "소득적격",
     <TableChip />,
+    "2023-01-10 09:00:00",
     9.0,
-    37,
-    4.3
+    "",
+    "2023-01-10 09:00:00"
   ),
   createData(
     <StyledCheck />,
@@ -175,9 +189,10 @@ const rows = [
     "소득적격",
     "개인전문",
     <TableChip />,
+    "2023-01-10 09:00:00",
     16.0,
-    24,
-    6.0
+    "",
+    ""
   ),
   createData(
     <StyledCheck />,
@@ -185,9 +200,10 @@ const rows = [
     "소득적격",
     "개인전문",
     <TableChip />,
+    "2023-01-10 09:00:00",
     3.7,
-    67,
-    4.3
+    "서류 식별 불가 금융투자업자에 계좌를 개설한지 1년 미만으로 전문투자자 승인 불가",
+    "2023-01-10 09:00:00"
   ),
   createData(
     <StyledCheck />,
@@ -195,9 +211,10 @@ const rows = [
     "소득적격",
     "소득적격",
     <TableChip />,
+    "2023-01-10 09:00:00",
     16.0,
-    49,
-    3.9
+    "",
+    "2023-01-10 09:00:00"
   ),
   createData(
     <StyledCheck />,
@@ -205,9 +222,10 @@ const rows = [
     "소득적격",
     "개인전문",
     <TableChip />,
+    "2023-01-10 09:00:00",
     6.0,
-    24,
-    4.0
+    "",
+    ""
   ),
   createData(
     <StyledCheck />,
@@ -215,9 +233,10 @@ const rows = [
     "소득적격",
     "개인전문",
     <TableChip />,
+    "2023-01-10 09:00:00",
     9.0,
-    37,
-    4.3
+    "서류 식별 불가 금융투자업자에 계좌를 개설한지 1년 미만으로 전문투자자 승인 불가",
+    "2023-01-10 09:00:00"
   ),
   createData(
     <StyledCheck />,
@@ -225,9 +244,10 @@ const rows = [
     "소득적격",
     "소득적격",
     <TableChip />,
+    "2023-01-10 09:00:00",
     16.0,
-    24,
-    6.0
+    "",
+    "2023-01-10 09:00:00"
   ),
   createData(
     <StyledCheck />,
@@ -235,9 +255,10 @@ const rows = [
     "소득적격",
     "개인전문",
     <TableChip />,
+    "2023-01-10 09:00:00",
     3.7,
-    67,
-    4.3
+    "",
+    ""
   ),
   createData(
     <StyledCheck />,
@@ -245,9 +266,10 @@ const rows = [
     "소득적격",
     "개인전문",
     <TableChip />,
+    "2023-01-10 09:00:00",
     16.0,
-    49,
-    3.9
+    "서류 식별 불가 금융투자업자에 계좌를 개설한지 1년 미만으로 전문투자자 승인 불가",
+    "2023-01-10 09:00:00"
   ),
   createData(
     <StyledCheck />,
@@ -255,9 +277,10 @@ const rows = [
     "소득적격",
     "개인전문",
     <TableChip />,
+    "2023-01-10 09:00:00",
     6.0,
-    24,
-    4.0
+    "",
+    "2023-01-10 09:00:00"
   ),
   createData(
     <StyledCheck />,
@@ -265,9 +288,10 @@ const rows = [
     "소득적격",
     "개인전문",
     <TableChip />,
+    "2023-01-10 09:00:00",
     9.0,
-    37,
-    4.3
+    "",
+    ""
   ),
   createData(
     <StyledCheck />,
@@ -275,9 +299,10 @@ const rows = [
     "소득적격",
     "개인전문",
     <TableChip />,
+    "2023-01-10 09:00:00",
     16.0,
-    24,
-    6.0
+    "서류 식별 불가 금융투자업자에 계좌를 개설한지 1년 미만으로 전문투자자 승인 불가",
+    "2023-01-10 09:00:00"
   ),
   createData(
     <StyledCheck />,
@@ -285,9 +310,10 @@ const rows = [
     "소득적격",
     "소득적격",
     <TableChip />,
+    "2023-01-10 09:00:00",
     3.7,
-    67,
-    4.3
+    "",
+    "2023-01-10 09:00:00"
   ),
   createData(
     <StyledCheck />,
@@ -295,9 +321,10 @@ const rows = [
     "소득적격",
     "개인전문",
     <TableChip />,
+    "2023-01-10 09:00:00",
     16.0,
-    49,
-    3.9
+    "",
+    ""
   ),
   createData(
     <StyledCheck />,
@@ -305,9 +332,10 @@ const rows = [
     "소득적격",
     "개인전문",
     <TableChip />,
+    "2023-01-10 09:00:00",
     6.0,
-    24,
-    4.0
+    "서류 식별 불가 금융투자업자에 계좌를 개설한지 1년 미만으로 전문투자자 승인 불가",
+    "2023-01-10 09:00:00"
   ),
   createData(
     <StyledCheck />,
@@ -315,9 +343,10 @@ const rows = [
     "소득적격",
     "소득적격",
     <TableChip />,
+    "2023-01-10 09:00:00",
     9.0,
-    37,
-    4.3
+    "",
+    "2023-01-10 09:00:00"
   ),
   createData(
     <StyledCheck />,
@@ -325,9 +354,10 @@ const rows = [
     "소득적격",
     "개인전문",
     <TableChip />,
+    "2023-01-10 09:00:00",
     16.0,
-    24,
-    6.0
+    "",
+    ""
   ),
   createData(
     <StyledCheck />,
@@ -335,9 +365,10 @@ const rows = [
     "소득적격",
     "개인전문",
     <TableChip />,
+    "2023-01-10 09:00:00",
     3.7,
-    67,
-    4.3
+    " 서류 식별 불가 금융투자업자에 계좌를 개설한지 1년 미만으로 전문투자자 승인 불가",
+    "2023-01-10 09:00:00"
   ),
   createData(
     <StyledCheck />,
@@ -345,9 +376,10 @@ const rows = [
     "소득적격",
     "소득적격",
     <TableChip />,
+    "2023-01-10 09:00:00",
     16.0,
-    49,
-    3.9
+    "",
+    "2023-01-10 09:00:00"
   ),
   createData(
     <StyledCheck />,
@@ -355,9 +387,10 @@ const rows = [
     "소득적격",
     "개인전문",
     <TableChip />,
+    "2023-01-10 09:00:00",
     6.0,
-    24,
-    4.0
+    "",
+    ""
   ),
   createData(
     <StyledCheck />,
@@ -365,9 +398,10 @@ const rows = [
     "소득적격",
     "개인전문",
     <TableChip />,
+    "2023-01-10 09:00:00",
     9.0,
-    37,
-    4.3
+    " 서류 식별 불가 금융투자업자에 계좌를 개설한지 1년 미만으로 전문투자자 승인 불가",
+    "2023-01-10 09:00:00"
   ),
   createData(
     <StyledCheck />,
@@ -375,9 +409,10 @@ const rows = [
     "소득적격",
     "소득적격",
     <TableChip />,
+    "2023-01-10 09:00:00",
     16.0,
-    24,
-    6.0
+    "",
+    "2023-01-10 09:00:00"
   ),
   createData(
     <StyledCheck />,
@@ -385,9 +420,10 @@ const rows = [
     "소득적격",
     "개인전문",
     <TableChip />,
+    "2023-01-10 09:00:00",
     3.7,
-    67,
-    4.3
+    "",
+    ""
   ),
   createData(
     <StyledCheck />,
@@ -395,9 +431,10 @@ const rows = [
     "소득적격",
     "개인전문",
     <TableChip />,
+    "2023-01-10 09:00:00",
     16.0,
-    49,
-    3.9
+    "서류 식별 불가 금융투자업자에 계좌를 개설한지 1년 미만으로 전문투자자 승인 불가",
+    "2023-01-10 09:00:00"
   ),
   createData(
     <StyledCheck />,
@@ -405,9 +442,10 @@ const rows = [
     "소득적격",
     "소득적격",
     <TableChip />,
+    "2023-01-10 09:00:00",
     6.0,
-    24,
-    4.0
+    "",
+    "2023-01-10 09:00:00"
   ),
   createData(
     <StyledCheck />,
@@ -415,9 +453,10 @@ const rows = [
     "소득적격",
     "개인전문",
     <TableChip />,
+    "2023-01-10 09:00:00",
     9.0,
-    37,
-    4.3
+    "",
+    ""
   ),
   createData(
     <StyledCheck />,
@@ -425,9 +464,10 @@ const rows = [
     "소득적격",
     "개인전문",
     <TableChip />,
+    "2023-01-10 09:00:00",
     16.0,
-    24,
-    6.0
+    "서류 식별 불가 금융투자업자에 계좌를 개설한지 1년 미만으로 전문투자자 승인 불가",
+    "2023-01-10 09:00:00"
   ),
   createData(
     <StyledCheck />,
@@ -435,9 +475,10 @@ const rows = [
     "소득적격",
     "소득적격",
     <TableChip />,
+    "2023-01-10 09:00:00",
     3.7,
-    67,
-    4.3
+    "",
+    "2023-01-10 09:00:00"
   ),
   createData(
     <StyledCheck />,
@@ -445,9 +486,10 @@ const rows = [
     "소득적격",
     "개인전문",
     <TableChip />,
+    "2023-01-10 09:00:00",
     16.0,
-    49,
-    3.9
+    "",
+    ""
   ),
   createData(
     <StyledCheck />,
@@ -455,9 +497,10 @@ const rows = [
     "소득적격",
     "개인전문",
     <TableChip />,
+    "2023-01-10 09:00:00",
     6.0,
-    24,
-    4.0
+    " 서류 식별 불가 금융투자업자에 계좌를 개설한지 1년 미만으로 전문투자자 승인 불가",
+    "2023-01-10 09:00:00"
   ),
   createData(
     <StyledCheck />,
@@ -465,9 +508,10 @@ const rows = [
     "소득적격",
     "소득적격",
     <TableChip />,
+    "2023-01-10 09:00:00",
     9.0,
-    37,
-    4.3
+    "",
+    "2023-01-10 09:00:00"
   ),
   createData(
     <StyledCheck />,
@@ -475,9 +519,10 @@ const rows = [
     "소득적격",
     "개인전문",
     <TableChip />,
+    "2023-01-10 09:00:00",
     16.0,
-    24,
-    6.0
+    "",
+    ""
   ),
   createData(
     <StyledCheck />,
@@ -485,9 +530,10 @@ const rows = [
     "소득적격",
     "개인전문",
     <TableChip />,
+    "2023-01-10 09:00:00",
     3.7,
-    67,
-    4.3
+    " 서류 식별 불가 금융투자업자에 계좌를 개설한지 1년 미만으로 전문투자자 승인 불가",
+    "2023-01-10 09:00:00"
   ),
   createData(
     <StyledCheck />,
@@ -495,9 +541,10 @@ const rows = [
     "소득적격",
     "소득적격",
     <TableChip />,
+    "2023-01-10 09:00:00",
     16.0,
-    49,
-    3.9
+    "",
+    "2023-01-10 09:00:00"
   ),
   createData(
     <StyledCheck />,
@@ -505,9 +552,10 @@ const rows = [
     "소득적격",
     "개인전문",
     <TableChip />,
+    "2023-01-10 09:00:00",
     6.0,
-    24,
-    4.0
+    "",
+    ""
   ),
   createData(
     <StyledCheck />,
@@ -515,9 +563,10 @@ const rows = [
     "소득적격",
     "개인전문",
     <TableChip />,
+    "2023-01-10 09:00:00",
     9.0,
-    37,
-    4.3
+    " 서류 식별 불가 금융투자업자에 계좌를 개설한지 1년 미만으로 전문투자자 승인 불가",
+    "2023-01-10 09:00:00"
   ),
   createData(
     <StyledCheck />,
@@ -525,9 +574,10 @@ const rows = [
     "소득적격",
     "소득적격",
     <TableChip />,
+    "2023-01-10 09:00:00",
     16.0,
-    24,
-    6.0
+    "",
+    "2023-01-10 09:00:00"
   ),
   createData(
     <StyledCheck />,
@@ -535,9 +585,10 @@ const rows = [
     "소득적격",
     "개인전문",
     <TableChip />,
+    "2023-01-10 09:00:00",
     3.7,
-    67,
-    4.3
+    "",
+    ""
   ),
   createData(
     <StyledCheck />,
@@ -545,16 +596,17 @@ const rows = [
     "소득적격",
     "개인전문",
     <TableChip />,
+    "2023-01-10 09:00:00",
     16.0,
-    49,
-    3.9
+    " 서류 식별 불가 금융투자업자에 계좌를 개설한지 1년 미만으로 전문투자자 승인 불가",
+    "2023-01-10 09:00:00"
   ),
 ];
 
 export default function Tables() {
   return (
     <TableContainer component={Paper}>
-      <Table sx={{ maxWidth: 1170, minWidth: 1170 }}>
+      <Table sx={{ minWidth: 1170, width: "100%" }}>
         <TableHead>
           <TableRow>
             <StyledTableCell align="center">
@@ -580,7 +632,8 @@ export default function Tables() {
               <StyledTableCell align="center">{row.document}</StyledTableCell>
               <StyledTableCell align="center">{row.fat}</StyledTableCell>
               <StyledTableCell align="center">{row.carbs}</StyledTableCell>
-              <StyledTableCell align="center">{row.protein}</StyledTableCell>
+              <StyledTableCell align="left">{row.protein}</StyledTableCell>
+              <StyledTableCell align="center">{row.last}</StyledTableCell>
             </StyledTableRow>
           ))}
         </TableBody>
