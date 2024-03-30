@@ -102,7 +102,7 @@ const LandingTabs = () => {
           <Tables />
         </CustomTabPanel>
         <CustomTabPanel value={value} index={1}>
-          Item Two
+          <Tables />
         </CustomTabPanel>
         <CustomTabPanel value={value} index={2}>
           Item Three

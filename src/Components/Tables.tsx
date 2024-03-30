@@ -12,6 +12,7 @@ import TableChip from "./TableChip";
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   borderRight: "1px solid #fff",
+  borderBottom: "1px solid #fff",
   [`&.${tableCellClasses.head}`]: {
     backgroundColor: "#EBEEF3",
     color: "#222222",
@@ -606,7 +607,7 @@ const rows = [
 export default function Tables() {
   return (
     <TableContainer component={Paper}>
-      <Table sx={{ minWidth: 1170, width: "100%" }}>
+      <Table sx={{ minWidth: 1170 }}>
         <TableHead>
           <TableRow>
             <StyledTableCell align="center">
