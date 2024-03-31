@@ -5,8 +5,10 @@ import Tab from "@mui/material/Tab";
 import Box from "@mui/material/Box";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { useTheme } from "@mui/material/styles";
-import { Typography } from "@mui/material";
+import { MenuItem, Typography } from "@mui/material";
+
 import Tables from "./Tables";
+import { CssMenuItem, CssTextField } from "./CustomInputs";
 
 const AntTabs = styled(Tabs)({
   borderBottom: "1px solid #e8e8e8",
@@ -99,6 +101,64 @@ const LandingTabs = () => {
       </Box>
       <Box sx={{ bgcolor: "#F4F4F5" }}>
         <CustomTabPanel value={value} index={0}>
+          <Box
+            sx={{
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "center",
+            }}
+          >
+            <Typography
+              fontSize={{
+                xs: "12 px",
+                sm: "20px",
+                color: "#0B101A",
+                fontWeight: 600,
+              }}
+            >
+              신청 목록{" "}
+              <span style={{ color: "#5A616A", fontWeight: 500 }}>
+                (총 100명 | 승인대기 1건)
+              </span>
+            </Typography>
+            <Box sx={{ display: "flex", gap: 1 }}>
+              <CssTextField
+                size="small"
+                select
+                sx={{ width: "150.15px" }}
+                defaultValue="승인여부 전체"
+              >
+                <CssMenuItem value="1" sx={{}}>
+                  승인여부 전체
+                </CssMenuItem>
+                <CssMenuItem value="2">승인대기</CssMenuItem>
+                <CssMenuItem value="3">승인완료</CssMenuItem>
+                <CssMenuItem value="4">승인거부</CssMenuItem>
+              </CssTextField>
+              <CssTextField
+                size="small"
+                select
+                sx={{ width: "150.15px" }}
+                defaultValue="승인여부 전체"
+              >
+                <CssMenuItem value="1" sx={{}}>
+                  신청일시순
+                </CssMenuItem>
+                <CssMenuItem value="2">승인일시순</CssMenuItem>
+              </CssTextField>
+              <CssTextField
+                size="small"
+                select
+                sx={{ width: "150.15px" }}
+                defaultValue="승인여부 전체"
+              >
+                <CssMenuItem value="1" sx={{}}>
+                  승인완료
+                </CssMenuItem>
+                <CssMenuItem value="2">승인거부</CssMenuItem>
+              </CssTextField>
+            </Box>
+          </Box>
           <Tables />
         </CustomTabPanel>
         <CustomTabPanel value={value} index={1}>
