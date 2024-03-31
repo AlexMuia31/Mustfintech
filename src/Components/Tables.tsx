@@ -47,9 +47,21 @@ function createData(
   fat: any,
   carbs: any,
   protein: any,
-  last: any
+  last: any,
+  manager: any
 ) {
-  return { checkbox, id, name, calories, document, fat, carbs, protein, last };
+  return {
+    checkbox,
+    id,
+    name,
+    calories,
+    document,
+    fat,
+    carbs,
+    protein,
+    last,
+    manager,
+  };
 }
 
 const rows = [
@@ -62,7 +74,8 @@ const rows = [
     "2023-01-10 09:00:00",
     <YellowChip label="승인대기" />,
     " ",
-    " "
+    " ",
+    ""
   ),
   createData(
     <StyledCheck />,
@@ -73,7 +86,8 @@ const rows = [
     "2023-01-10 09:00:00",
     <RedChip label="승인거부" />,
     "서류 식별 불가 금융투자업자에 계좌를 개설한지 1년 미만으로 전문투자자 승인 불가",
-    "2023-01-10 09:00:00"
+    "2023-01-10 09:00:00",
+    "김관리자"
   ),
   createData(
     <StyledCheck />,
@@ -84,7 +98,8 @@ const rows = [
     "2023-01-10 09:00:00",
     <GreenChip label="승인완료" />,
     "",
-    "2023-01-10 09:00:00"
+    "2023-01-10 09:00:00",
+    "김관리자"
   ),
   createData(
     <StyledCheck />,
@@ -94,6 +109,7 @@ const rows = [
     <TableChip />,
     "2023-01-10 09:00:00",
     <YellowChip label="승인대기" />,
+    "",
     "",
     ""
   ),
@@ -106,7 +122,8 @@ const rows = [
     "2023-01-10 09:00:00",
     <RedChip label="승인거부" />,
     "서류 식별 불가 금융투자업자에 계좌를 개설한지 1년 미만으로 전문투자자 승인 불가",
-    "2023-01-10 09:00:00"
+    "2023-01-10 09:00:00",
+    "김관리자"
   ),
   createData(
     <StyledCheck />,
@@ -117,7 +134,8 @@ const rows = [
     "2023-01-10 09:00:00",
     <GreenChip label="승인완료" />,
     "",
-    "2023-01-10 09:00:00"
+    "2023-01-10 09:00:00",
+    "김관리자"
   ),
   createData(
     <StyledCheck />,
@@ -127,6 +145,7 @@ const rows = [
     <TableChip />,
     "2023-01-10 09:00:00",
     <YellowChip label="승인대기" />,
+    "",
     "",
     ""
   ),
@@ -139,7 +158,8 @@ const rows = [
     "2023-01-10 09:00:00",
     <RedChip label="승인거부" />,
     "서류 식별 불가 금융투자업자에 계좌를 개설한지 1년 미만으로 전문투자자 승인 불가",
-    "2023-01-10 09:00:00"
+    "2023-01-10 09:00:00",
+    "김관리자"
   ),
   createData(
     <StyledCheck />,
@@ -150,7 +170,8 @@ const rows = [
     "2023-01-10 09:00:00",
     <GreenChip label="승인완료" />,
     "",
-    "2023-01-10 09:00:00"
+    "2023-01-10 09:00:00",
+    "김관리자"
   ),
   createData(
     <StyledCheck />,
@@ -160,6 +181,7 @@ const rows = [
     <TableChip />,
     "2023-01-10 09:00:00",
     <YellowChip label="승인대기" />,
+    "",
     "",
     ""
   ),
@@ -172,7 +194,8 @@ const rows = [
     "2023-01-10 09:00:00",
     <RedChip label="승인거부" />,
     "서류 식별 불가 금융투자업자에 계좌를 개설한지 1년 미만으로 전문투자자 승인 불가",
-    "2023-01-10 09:00:00"
+    "2023-01-10 09:00:00",
+    "김관리자"
   ),
   createData(
     <StyledCheck />,
@@ -183,7 +206,8 @@ const rows = [
     "2023-01-10 09:00:00",
     <GreenChip label="승인완료" />,
     "",
-    "2023-01-10 09:00:00"
+    "2023-01-10 09:00:00",
+    "김관리자"
   ),
   createData(
     <StyledCheck />,
@@ -193,6 +217,7 @@ const rows = [
     <TableChip />,
     "2023-01-10 09:00:00",
     <YellowChip label="승인대기" />,
+    "",
     "",
     ""
   ),
@@ -205,7 +230,8 @@ const rows = [
     "2023-01-10 09:00:00",
     <RedChip label="승인거부" />,
     "서류 식별 불가 금융투자업자에 계좌를 개설한지 1년 미만으로 전문투자자 승인 불가",
-    "2023-01-10 09:00:00"
+    "2023-01-10 09:00:00",
+    "김관리자"
   ),
   createData(
     <StyledCheck />,
@@ -216,7 +242,8 @@ const rows = [
     "2023-01-10 09:00:00",
     <GreenChip label="승인완료" />,
     "",
-    "2023-01-10 09:00:00"
+    "2023-01-10 09:00:00",
+    "김관리자"
   ),
   createData(
     <StyledCheck />,
@@ -226,6 +253,7 @@ const rows = [
     <TableChip />,
     "2023-01-10 09:00:00",
     <YellowChip label="승인대기" />,
+    "",
     "",
     ""
   ),
@@ -238,7 +266,8 @@ const rows = [
     "2023-01-10 09:00:00",
     <RedChip label="승인거부" />,
     "서류 식별 불가 금융투자업자에 계좌를 개설한지 1년 미만으로 전문투자자 승인 불가",
-    "2023-01-10 09:00:00"
+    "2023-01-10 09:00:00",
+    "김관리자"
   ),
   createData(
     <StyledCheck />,
@@ -249,7 +278,8 @@ const rows = [
     "2023-01-10 09:00:00",
     <GreenChip label="승인완료" />,
     "",
-    "2023-01-10 09:00:00"
+    "2023-01-10 09:00:00",
+    "김관리자"
   ),
   createData(
     <StyledCheck />,
@@ -259,6 +289,7 @@ const rows = [
     <TableChip />,
     "2023-01-10 09:00:00",
     <YellowChip label="승인대기" />,
+    "",
     "",
     ""
   ),
@@ -271,7 +302,8 @@ const rows = [
     "2023-01-10 09:00:00",
     <RedChip label="승인거부" />,
     "서류 식별 불가 금융투자업자에 계좌를 개설한지 1년 미만으로 전문투자자 승인 불가",
-    "2023-01-10 09:00:00"
+    "2023-01-10 09:00:00",
+    "김관리자"
   ),
   createData(
     <StyledCheck />,
@@ -282,7 +314,8 @@ const rows = [
     "2023-01-10 09:00:00",
     <GreenChip label="승인완료" />,
     "",
-    "2023-01-10 09:00:00"
+    "2023-01-10 09:00:00",
+    "김관리자"
   ),
   createData(
     <StyledCheck />,
@@ -292,6 +325,7 @@ const rows = [
     <TableChip />,
     "2023-01-10 09:00:00",
     <YellowChip label="승인대기" />,
+    "",
     "",
     ""
   ),
@@ -304,7 +338,8 @@ const rows = [
     "2023-01-10 09:00:00",
     <RedChip label="승인거부" />,
     "서류 식별 불가 금융투자업자에 계좌를 개설한지 1년 미만으로 전문투자자 승인 불가",
-    "2023-01-10 09:00:00"
+    "2023-01-10 09:00:00",
+    "김관리자"
   ),
   createData(
     <StyledCheck />,
@@ -315,7 +350,8 @@ const rows = [
     "2023-01-10 09:00:00",
     <GreenChip label="승인완료" />,
     "",
-    "2023-01-10 09:00:00"
+    "2023-01-10 09:00:00",
+    "김관리자"
   ),
   createData(
     <StyledCheck />,
@@ -325,6 +361,7 @@ const rows = [
     <TableChip />,
     "2023-01-10 09:00:00",
     <YellowChip label="승인대기" />,
+    "",
     "",
     ""
   ),
@@ -337,7 +374,8 @@ const rows = [
     "2023-01-10 09:00:00",
     <RedChip label="승인거부" />,
     "서류 식별 불가 금융투자업자에 계좌를 개설한지 1년 미만으로 전문투자자 승인 불가",
-    "2023-01-10 09:00:00"
+    "2023-01-10 09:00:00",
+    "김관리자"
   ),
   createData(
     <StyledCheck />,
@@ -348,7 +386,8 @@ const rows = [
     "2023-01-10 09:00:00",
     <GreenChip label="승인완료" />,
     "",
-    "2023-01-10 09:00:00"
+    "2023-01-10 09:00:00",
+    "김관리자"
   ),
   createData(
     <StyledCheck />,
@@ -358,6 +397,7 @@ const rows = [
     <TableChip />,
     "2023-01-10 09:00:00",
     <YellowChip label="승인대기" />,
+    "",
     "",
     ""
   ),
@@ -370,7 +410,8 @@ const rows = [
     "2023-01-10 09:00:00",
     <RedChip label="승인거부" />,
     " 서류 식별 불가 금융투자업자에 계좌를 개설한지 1년 미만으로 전문투자자 승인 불가",
-    "2023-01-10 09:00:00"
+    "2023-01-10 09:00:00",
+    "김관리자"
   ),
   createData(
     <StyledCheck />,
@@ -381,7 +422,8 @@ const rows = [
     "2023-01-10 09:00:00",
     <GreenChip label="승인완료" />,
     "",
-    "2023-01-10 09:00:00"
+    "2023-01-10 09:00:00",
+    "김관리자"
   ),
   createData(
     <StyledCheck />,
@@ -391,6 +433,7 @@ const rows = [
     <TableChip />,
     "2023-01-10 09:00:00",
     <YellowChip label="승인대기" />,
+    "",
     "",
     ""
   ),
@@ -403,7 +446,8 @@ const rows = [
     "2023-01-10 09:00:00",
     <RedChip label="승인거부" />,
     " 서류 식별 불가 금융투자업자에 계좌를 개설한지 1년 미만으로 전문투자자 승인 불가",
-    "2023-01-10 09:00:00"
+    "2023-01-10 09:00:00",
+    "김관리자"
   ),
   createData(
     <StyledCheck />,
@@ -414,7 +458,8 @@ const rows = [
     "2023-01-10 09:00:00",
     <GreenChip label="승인완료" />,
     "",
-    "2023-01-10 09:00:00"
+    "2023-01-10 09:00:00",
+    "김관리자"
   ),
   createData(
     <StyledCheck />,
@@ -424,6 +469,7 @@ const rows = [
     <TableChip />,
     "2023-01-10 09:00:00",
     <YellowChip label="승인대기" />,
+    "",
     "",
     ""
   ),
@@ -436,7 +482,8 @@ const rows = [
     "2023-01-10 09:00:00",
     <RedChip label="승인거부" />,
     "서류 식별 불가 금융투자업자에 계좌를 개설한지 1년 미만으로 전문투자자 승인 불가",
-    "2023-01-10 09:00:00"
+    "2023-01-10 09:00:00",
+    "김관리자"
   ),
   createData(
     <StyledCheck />,
@@ -447,7 +494,8 @@ const rows = [
     "2023-01-10 09:00:00",
     <GreenChip label="승인완료" />,
     "",
-    "2023-01-10 09:00:00"
+    "2023-01-10 09:00:00",
+    "김관리자"
   ),
   createData(
     <StyledCheck />,
@@ -457,6 +505,7 @@ const rows = [
     <TableChip />,
     "2023-01-10 09:00:00",
     <YellowChip label="승인대기" />,
+    "",
     "",
     ""
   ),
@@ -469,7 +518,8 @@ const rows = [
     "2023-01-10 09:00:00",
     <RedChip label="승인거부" />,
     "서류 식별 불가 금융투자업자에 계좌를 개설한지 1년 미만으로 전문투자자 승인 불가",
-    "2023-01-10 09:00:00"
+    "2023-01-10 09:00:00",
+    "김관리자"
   ),
   createData(
     <StyledCheck />,
@@ -480,7 +530,8 @@ const rows = [
     "2023-01-10 09:00:00",
     <GreenChip label="승인완료" />,
     "",
-    "2023-01-10 09:00:00"
+    "2023-01-10 09:00:00",
+    "김관리자"
   ),
   createData(
     <StyledCheck />,
@@ -490,6 +541,7 @@ const rows = [
     <TableChip />,
     "2023-01-10 09:00:00",
     <YellowChip label="승인대기" />,
+    "",
     "",
     ""
   ),
@@ -502,7 +554,8 @@ const rows = [
     "2023-01-10 09:00:00",
     <RedChip label="승인거부" />,
     " 서류 식별 불가 금융투자업자에 계좌를 개설한지 1년 미만으로 전문투자자 승인 불가",
-    "2023-01-10 09:00:00"
+    "2023-01-10 09:00:00",
+    "김관리자"
   ),
   createData(
     <StyledCheck />,
@@ -513,7 +566,8 @@ const rows = [
     "2023-01-10 09:00:00",
     <GreenChip label="승인완료" />,
     "",
-    "2023-01-10 09:00:00"
+    "2023-01-10 09:00:00",
+    "김관리자"
   ),
   createData(
     <StyledCheck />,
@@ -523,6 +577,7 @@ const rows = [
     <TableChip />,
     "2023-01-10 09:00:00",
     <YellowChip label="승인대기" />,
+    "",
     "",
     ""
   ),
@@ -535,7 +590,8 @@ const rows = [
     "2023-01-10 09:00:00",
     <RedChip label="승인거부" />,
     " 서류 식별 불가 금융투자업자에 계좌를 개설한지 1년 미만으로 전문투자자 승인 불가",
-    "2023-01-10 09:00:00"
+    "2023-01-10 09:00:00",
+    "김관리자"
   ),
   createData(
     <StyledCheck />,
@@ -546,7 +602,8 @@ const rows = [
     "2023-01-10 09:00:00",
     <GreenChip label="승인완료" />,
     "",
-    "2023-01-10 09:00:00"
+    "2023-01-10 09:00:00",
+    "김관리자"
   ),
   createData(
     <StyledCheck />,
@@ -556,6 +613,7 @@ const rows = [
     <TableChip />,
     "2023-01-10 09:00:00",
     <YellowChip label="승인대기" />,
+    "",
     "",
     ""
   ),
@@ -568,7 +626,8 @@ const rows = [
     "2023-01-10 09:00:00",
     <RedChip label="승인거부" />,
     " 서류 식별 불가 금융투자업자에 계좌를 개설한지 1년 미만으로 전문투자자 승인 불가",
-    "2023-01-10 09:00:00"
+    "2023-01-10 09:00:00",
+    "김관리자"
   ),
   createData(
     <StyledCheck />,
@@ -579,7 +638,8 @@ const rows = [
     "2023-01-10 09:00:00",
     <GreenChip label="승인완료" />,
     "",
-    "2023-01-10 09:00:00"
+    "2023-01-10 09:00:00",
+    "김관리자"
   ),
   createData(
     <StyledCheck />,
@@ -589,6 +649,7 @@ const rows = [
     <TableChip />,
     "2023-01-10 09:00:00",
     <YellowChip label="승인대기" />,
+    "",
     "",
     ""
   ),
@@ -601,7 +662,8 @@ const rows = [
     "2023-01-10 09:00:00",
     <RedChip label="승인거부" />,
     " 서류 식별 불가 금융투자업자에 계좌를 개설한지 1년 미만으로 전문투자자 승인 불가",
-    "2023-01-10 09:00:00"
+    "2023-01-10 09:00:00",
+    "김관리자"
   ),
 ];
 
@@ -621,7 +683,8 @@ export default function Tables() {
             <StyledTableCell align="center">신청일시</StyledTableCell>
             <StyledTableCell align="center">승인여부</StyledTableCell>
             <StyledTableCell align="center">승인거부 사유</StyledTableCell>
-            <StyledTableCell align="center">승인거부 사유</StyledTableCell>
+            <StyledTableCell align="center">승인일시</StyledTableCell>
+            <StyledTableCell align="center"> 관리자</StyledTableCell>
           </TableRow>
         </TableHead>
         <TableBody>
@@ -636,6 +699,7 @@ export default function Tables() {
               <StyledTableCell align="center">{row.carbs}</StyledTableCell>
               <StyledTableCell align="left">{row.protein}</StyledTableCell>
               <StyledTableCell align="center">{row.last}</StyledTableCell>
+              <StyledTableCell align="center">{row.manager}</StyledTableCell>
             </StyledTableRow>
           ))}
         </TableBody>
