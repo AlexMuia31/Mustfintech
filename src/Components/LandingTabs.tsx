@@ -5,10 +5,11 @@ import Tab from "@mui/material/Tab";
 import Box from "@mui/material/Box";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { useTheme } from "@mui/material/styles";
-import { MenuItem, Typography } from "@mui/material";
+import { Divider, MenuItem, Typography } from "@mui/material";
 
 import Tables from "./Tables";
 import { CssMenuItem, CssTextField } from "./CustomInputs";
+import { CustomButton } from "./CustomButtons";
 
 const AntTabs = styled(Tabs)({
   borderBottom: "1px solid #e8e8e8",
@@ -106,12 +107,15 @@ const LandingTabs = () => {
               display: "flex",
               justifyContent: "space-between",
               alignItems: "center",
+              flexDirection: { sm: "column", xs: "column", md: "row" },
+              mt: { sm: "10px", xs: "10px", md: "30px" },
             }}
           >
             <Typography
               fontSize={{
-                xs: "12 px",
-                sm: "20px",
+                xs: "12px",
+                md: "20px",
+                sm: "15px",
                 color: "#0B101A",
                 fontWeight: 600,
               }}
@@ -121,7 +125,13 @@ const LandingTabs = () => {
                 (총 100명 | 승인대기 1건)
               </span>
             </Typography>
-            <Box sx={{ display: "flex", gap: 1 }}>
+            <Box
+              sx={{
+                display: "flex",
+                gap: 1,
+                flexDirection: { sm: "row", xs: "column" },
+              }}
+            >
               <CssTextField
                 size="small"
                 select
@@ -157,6 +167,41 @@ const LandingTabs = () => {
                 </CssMenuItem>
                 <CssMenuItem value="2">승인거부</CssMenuItem>
               </CssTextField>
+            </Box>
+          </Box>
+          <Divider sx={{ mt: "10px", mb: "10px" }} />
+          <Box
+            sx={{
+              display: "flex",
+              justifyContent: "space-between",
+              mb: "10px",
+              flexDirection: { sm: "row", xs: "column", md: "row" },
+              gap: 2,
+            }}
+          >
+            <CustomButton sx={{ width: "100px", height: "39px" }}>
+              등록
+            </CustomButton>
+            <Box sx={{ display: "flex", alignItems: "center" }}>
+              <Typography sx={{ color: "#5A616A", mr: "17px" }}>
+                선택한 0건
+              </Typography>
+              <Box sx={{ display: "flex", gap: 1 }}>
+                <CssTextField
+                  size="small"
+                  select
+                  sx={{ width: "150.15px" }}
+                  defaultValue="승인여부 전체"
+                >
+                  <CssMenuItem value="1" sx={{}}>
+                    승인여부 전체
+                  </CssMenuItem>
+                  <CssMenuItem value="2">승인대기</CssMenuItem>
+                </CssTextField>
+                <CustomButton sx={{ height: "39px", width: "100px" }}>
+                  저장
+                </CustomButton>
+              </Box>
             </Box>
           </Box>
           <Tables />

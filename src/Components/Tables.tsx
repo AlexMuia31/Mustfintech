@@ -670,7 +670,7 @@ const rows = [
 export default function Tables() {
   return (
     <TableContainer component={Paper} elevation={0}>
-      <Table sx={{ minWidth: 1300 }} size="small">
+      <Table sx={{ minWidth: 1400 }} size="small">
         <TableHead>
           <TableRow>
             <StyledTableCell align="center">
