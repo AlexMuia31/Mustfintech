@@ -11,6 +11,7 @@ import Tables from "./Tables";
 import { CssMenuItem, CssTextField } from "./CustomInputs";
 import { CustomButton } from "./CustomButtons";
 import DocumentModals from "./Modals/DocumentModals";
+import InvestmentModals from "./Modals/InvestmentModal";
 
 const AntTabs = styled(Tabs)({
   borderBottom: "1px solid #e8e8e8",
@@ -180,9 +181,7 @@ const LandingTabs = () => {
               gap: 2,
             }}
           >
-            <CustomButton sx={{ width: "100px", height: "39px" }}>
-              등록
-            </CustomButton>
+            <InvestmentModals />
             <Box sx={{ display: "flex", alignItems: "center" }}>
               <Typography sx={{ color: "#5A616A", mr: "17px" }}>
                 선택한 0건
