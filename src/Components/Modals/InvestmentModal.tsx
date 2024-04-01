@@ -192,7 +192,12 @@ const InvestmentModals = () => {
               border: "1px solid #D7D8DA",
             }}
           >
-            <Box sx={{ display: "flex", height: { sm: "49px", xs: "42px" } }}>
+            <Box
+              sx={{
+                display: "flex",
+                height: { sm: "49px", xs: "42px" },
+              }}
+            >
               <Box
                 sx={{
                   background: "#EEF0F4",
@@ -213,38 +218,18 @@ const InvestmentModals = () => {
                   alignItems: "center",
                   width: { sm: "592px", xs: "100%" },
                   pl: { sm: 2, xs: 1 },
+                  borderBottom: "1px solid #D7D8DA",
                 }}
               >
                 <Typography>abc111, abc222</Typography>
               </Box>
             </Box>
-            <Box sx={{ display: "flex", height: { sm: "49px", xs: "42px" } }}>
-              <Box
-                sx={{
-                  background: "#EEF0F4",
-                  width: { sm: "160px", xs: "100px" },
-                  display: "flex",
-                  alignItems: "center",
-                }}
-              >
-                <Typography
-                  sx={{ fontSize: { md: "16px", xs: "12px" }, p: "5%" }}
-                >
-                  회원번호
-                </Typography>
-              </Box>
-              <Box
-                sx={{
-                  display: "flex",
-                  alignItems: "center",
-                  width: { sm: "592px", xs: "100%" },
-                  pl: { sm: 2, xs: 1 },
-                }}
-              >
-                <Typography>abc111, abc222</Typography>
-              </Box>
-            </Box>
-            <Box sx={{ display: "flex", height: { sm: "49px", xs: "42px" } }}>
+            <Box
+              sx={{
+                display: "flex",
+                height: { sm: "49px", xs: "42px" },
+              }}
+            >
               <Box
                 sx={{
                   background: "#EEF0F4",
@@ -264,12 +249,12 @@ const InvestmentModals = () => {
                 sx={{
                   display: "flex",
                   alignItems: "center",
-                  width: { sm: "595px", xs: "100%" },
+                  width: { sm: "592px", xs: "100%" },
                   pl: { sm: 2, xs: 1 },
-                  borderTop: "1px solid #D7D8DA",
+                  borderBottom: "1px solid #D7D8DA",
                 }}
               >
-                <Typography>김길동, ㈜가나다라투자</Typography>
+                <Typography>abc111, abc222</Typography>
               </Box>
             </Box>
             <Box sx={{ display: "flex", pr: 2 }}>
@@ -292,7 +277,6 @@ const InvestmentModals = () => {
                 sx={{
                   width: { sm: "592px", xs: "100%" },
                   pl: { sm: 2, xs: 1 },
-                  borderTop: "1px solid #D7D8DA",
                 }}
               >
                 <FormGroup>
@@ -355,7 +339,12 @@ const InvestmentModals = () => {
                   fullWidth
                   multiline
                   minRows={3}
-                  sx={{ mb: 2 }}
+                  sx={{
+                    mb: 2,
+                    ".MuiInputBase-root": {
+                      backgroundColor: "#DDE0E5",
+                    },
+                  }}
                   placeholder="사유 입력"
                 />
               </Box>
