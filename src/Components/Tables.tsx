@@ -10,6 +10,7 @@ import Paper from "@mui/material/Paper";
 import { StyledCheck } from "./StyledCheck";
 import TableChip from "./TableChip";
 import { GreenChip, RedChip, YellowChip } from "./CustomChips";
+import PreviewModal from "./Modals/PreviewModal";
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   borderRight: "1px solid #fff",
@@ -70,7 +71,7 @@ const rows = [
     1,
     "소득적격",
     " 개인전문",
-    <TableChip />,
+    <PreviewModal />,
     "2023-01-10 09:00:00",
     <YellowChip label="승인대기" />,
     " ",

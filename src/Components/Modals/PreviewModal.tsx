@@ -7,6 +7,7 @@ import FormGroup from "@mui/material/FormGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Checkbox from "@mui/material/Checkbox";
 import { CssTextField } from "../CustomInputs";
+import TableChip from "../TableChip";
 
 const style = {
   position: "absolute" as "absolute",
@@ -150,7 +151,7 @@ function ChildModal2() {
   );
 }
 
-const InvestmentModals = () => {
+const PreviewModal = () => {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => {
     setOpen(true);
@@ -161,12 +162,25 @@ const InvestmentModals = () => {
 
   return (
     <div>
-      <CustomButton
-        sx={{ height: "39px", width: "100px" }}
-        onClick={handleOpen}
-      >
-        등록
-      </CustomButton>
+      <Box sx={{ width: "100%", display: "flex", justifyContent: "center" }}>
+        <Box
+          sx={{
+            display: "flex",
+            width: "61px",
+            justifyContent: "center",
+            alignItems: "center",
+            background: "#EBEEF3",
+            height: "29px",
+            borderRadius: "8px",
+            border: "1px solid #D7D8DA",
+            cursor: "pointer",
+          }}
+          onClick={handleOpen}
+        >
+          <Typography sx={{ color: "#000" }}>보기</Typography>
+        </Box>
+      </Box>
+
       <Modal
         open={open}
         onClose={handleClose}
@@ -373,4 +387,4 @@ const InvestmentModals = () => {
   );
 };
 
-export default InvestmentModals;
+export default PreviewModal;
