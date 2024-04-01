@@ -10,6 +10,7 @@ import { Divider, MenuItem, Typography } from "@mui/material";
 import Tables from "./Tables";
 import { CssMenuItem, CssTextField } from "./CustomInputs";
 import { CustomButton } from "./CustomButtons";
+import DocumentModals from "./Modals/DocumentModals";
 
 const AntTabs = styled(Tabs)({
   borderBottom: "1px solid #e8e8e8",
@@ -198,9 +199,7 @@ const LandingTabs = () => {
                   </CssMenuItem>
                   <CssMenuItem value="2">승인대기</CssMenuItem>
                 </CssTextField>
-                <CustomButton sx={{ height: "39px", width: "100px" }}>
-                  저장
-                </CustomButton>
+                <DocumentModals />
               </Box>
             </Box>
           </Box>
