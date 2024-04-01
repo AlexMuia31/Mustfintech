@@ -1,10 +1,9 @@
 import React from "react";
-import { CustomButton } from "../CustomButtons";
+import { CustomButton, WhiteButton } from "../CustomButtons";
 import Modal from "@mui/material/Modal";
 import { Box, Button, Divider, Typography } from "@mui/material";
 import Image from "next/image";
 import { CssMenuItem, CssTextField } from "../CustomInputs";
-import { Css } from "@mui/icons-material";
 
 const style = {
   position: "absolute" as "absolute",
@@ -28,19 +27,114 @@ function ChildModal() {
 
   return (
     <React.Fragment>
-      <Button onClick={handleOpen}>Open Child Modal</Button>
+      <CustomButton
+        onClick={handleOpen}
+        sx={{ width: { sm: "160px", xs: "80px" } }}
+      >
+        저장
+      </CustomButton>
       <Modal
         open={open}
         onClose={handleClose}
         aria-labelledby="child-modal-title"
         aria-describedby="child-modal-description"
       >
-        <Box sx={{ ...style, width: 200 }}>
-          <h2 id="child-modal-title">Text in a child modal</h2>
-          <p id="child-modal-description">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-          </p>
-          <Button onClick={handleClose}>Close Child Modal</Button>
+        <Box sx={{ ...style, width: { sm: 400, xs: 280 }, p: "1%" }}>
+          <Box
+            sx={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "space-between",
+            }}
+          >
+            <Image
+              src="/info.png"
+              alt="close"
+              width={30}
+              height={30}
+              onClick={handleClose}
+            />
+            <Image
+              src="/close.png"
+              alt="close"
+              width={12}
+              height={12}
+              onClick={handleClose}
+            />
+          </Box>
+          <Typography fontSize={{ sm: "18px" }} mt="7px">
+            jpg, jpeg, gif, png, pdf 파일만 등록 가능합니다.
+          </Typography>
+          <Box sx={{ display: "flex", justifyContent: "center" }}>
+            <CustomButton
+              sx={{ mt: "7%", width: { sm: "170px", xs: "100px" } }}
+            >
+              확인
+            </CustomButton>
+          </Box>
+        </Box>
+      </Modal>
+    </React.Fragment>
+  );
+}
+
+function ChildModal2() {
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => {
+    setOpen(true);
+  };
+  const handleClose = () => {
+    setOpen(false);
+  };
+
+  return (
+    <React.Fragment>
+      <WhiteButton
+        onClick={handleOpen}
+        variant="outlined"
+        sx={{ width: { sm: "160px", xs: "80px" } }}
+      >
+        취소
+      </WhiteButton>
+      <Modal
+        open={open}
+        onClose={handleClose}
+        aria-labelledby="child-modal-title"
+        aria-describedby="child-modal-description"
+      >
+        <Box sx={{ ...style, width: { sm: 400, xs: 280 }, p: "1%" }}>
+          <Box
+            sx={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "space-between",
+            }}
+          >
+            <Image
+              src="/success.png"
+              alt="close"
+              width={30}
+              height={30}
+              onClick={handleClose}
+            />
+            <Image
+              src="/close.png"
+              alt="close"
+              width={12}
+              height={12}
+              onClick={handleClose}
+            />
+          </Box>
+          <Typography fontSize={{ sm: "18px" }} mt="7px">
+            저장되었습니다.
+          </Typography>
+          <Box sx={{ display: "flex", justifyContent: "center" }}>
+            <CustomButton
+              sx={{ mt: "7%", width: { sm: "170px", xs: "100px" } }}
+            >
+              확인
+            </CustomButton>
+          </Box>
         </Box>
       </Modal>
     </React.Fragment>
@@ -251,7 +345,12 @@ const DocumentModals = () => {
               background: "#D7D8DA",
             }}
           />
-          <ChildModal />
+          <Box
+            sx={{ display: "flex", justifyContent: "center", gap: 2, p: "2%" }}
+          >
+            <ChildModal />
+            <ChildModal2 />
+          </Box>
         </Box>
       </Modal>
     </div>
