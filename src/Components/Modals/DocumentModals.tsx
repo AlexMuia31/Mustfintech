@@ -14,6 +14,7 @@ const style = {
   bgcolor: "background.paper",
   boxShadow: 24,
   borderRadius: "12px",
+  fontFamily: "Pretendard",
 };
 
 function ChildModal() {
@@ -173,7 +174,16 @@ const DocumentModals = () => {
               p: { xs: 1, sm: 2 },
             }}
           >
-            <Typography>투자유형 변경</Typography>
+            <Typography
+              sx={{
+                fontFamily: "Pretendard",
+                fontWeight: 600,
+                fontSize: { sm: "18px", xs: "12px" },
+                lineHeight: "19.09px",
+              }}
+            >
+              투자유형 변경
+            </Typography>
             <Image
               src="/close.png"
               alt="close"
@@ -199,7 +209,13 @@ const DocumentModals = () => {
                 }}
               >
                 <Typography
-                  sx={{ fontSize: { md: "16px", xs: "12px" }, p: "5%" }}
+                  sx={{
+                    fontSize: { md: "16px", xs: "12px" },
+                    p: "5%",
+                    fontFamily: "Pretendard",
+                    fontWeight: 500,
+                    lineHeight: "19.09px",
+                  }}
                 >
                   회원번호
                 </Typography>
@@ -212,7 +228,16 @@ const DocumentModals = () => {
                   pl: { sm: 2, xs: 1 },
                 }}
               >
-                <Typography>abc111</Typography>
+                <Typography
+                  sx={{
+                    fontFamily: "Pretendard",
+                    fontWeight: 400,
+                    lineHeight: "19.09px",
+                    fontSize: { sm: "14px", xs: "12px" },
+                  }}
+                >
+                  abc111
+                </Typography>
               </Box>
             </Box>
             <Box sx={{ display: "flex", height: { sm: "49px", xs: "42px" } }}>
@@ -226,7 +251,13 @@ const DocumentModals = () => {
                 }}
               >
                 <Typography
-                  sx={{ fontSize: { md: "16px", xs: "12px" }, p: "5%" }}
+                  sx={{
+                    fontSize: { md: "16px", xs: "12px" },
+                    p: "5%",
+                    fontFamily: "Pretendard",
+                    fontWeight: 500,
+                    lineHeight: "19.09px",
+                  }}
                 >
                   회원명/법인명
                 </Typography>
@@ -240,7 +271,16 @@ const DocumentModals = () => {
                   borderTop: "1px solid #D7D8DA",
                 }}
               >
-                <Typography>김길동</Typography>
+                <Typography
+                  sx={{
+                    fontFamily: "Pretendard",
+                    fontWeight: 500,
+                    lineHeight: "19.09px",
+                    fontSize: { sm: "14px", xs: "12px" },
+                  }}
+                >
+                  김길동
+                </Typography>
               </Box>
             </Box>
             <Box sx={{ display: "flex", height: { sm: "49px", xs: "42px" } }}>
@@ -254,7 +294,13 @@ const DocumentModals = () => {
                 }}
               >
                 <Typography
-                  sx={{ fontSize: { md: "16px", xs: "12px" }, p: "5%" }}
+                  sx={{
+                    fontSize: { md: "16px", xs: "12px" },
+                    p: "5%",
+                    fontFamily: "Pretendard",
+                    fontWeight: 500,
+                    lineHeight: "19.09px",
+                  }}
                 >
                   투자유형 <span style={{ color: "red" }}>*</span>
                 </Typography>
@@ -304,7 +350,13 @@ const DocumentModals = () => {
                 }}
               >
                 <Typography
-                  sx={{ fontSize: { md: "16px", xs: "12px" }, p: "5%" }}
+                  sx={{
+                    fontSize: { md: "16px", xs: "12px" },
+                    p: "5%",
+                    fontFamily: "Pretendard",
+                    fontWeight: 500,
+                    lineHeight: "19.09px",
+                  }}
                 >
                   서류첨부 <span style={{ color: "red" }}>*</span>
                 </Typography>
@@ -325,6 +377,11 @@ const DocumentModals = () => {
                     color: "#222",
                     width: "76px",
                     "&:hover": { background: "#D7D8DA" },
+                    fontFamily: "Pretendard",
+                    fontWeight: 400,
+                    lineHeight: "16.8px",
+                    fontSize: "14px",
+                    letterSpacing: "-0.02px",
                   }}
                 >
                   파일 선택
@@ -333,10 +390,10 @@ const DocumentModals = () => {
             </Box>
           </Box>
           <Box sx={{ p: { xs: "5px 0px 20px 30px" } }}>
-            <Typography sx={{ fontSize: "13px" }}>
+            <Typography sx={{ fontSize: "13px", fontFamily: "Pretendard" }}>
               . 파일 형식은 jpg, jpeg, gif, png, pdf만 가능합니다.
             </Typography>
-            <Typography sx={{ fontSize: "13px" }}>
+            <Typography sx={{ fontSize: "13px", fontFamily: "Pretendard" }}>
               . 최대 10개, 100MB까지 등록이 가능합니다.
             </Typography>
           </Box>

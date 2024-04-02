@@ -16,7 +16,17 @@ const TableChip = () => {
           border: "1px solid #D7D8DA",
         }}
       >
-        <Typography sx={{ color: "#000" }}>보기</Typography>
+        <Typography
+          sx={{
+            color: "#222222",
+            fontFamily: "Pretendard",
+            fontWeight: 500,
+            letterSpacing: "-0.02px",
+            fontSize: "14px",
+          }}
+        >
+          보기
+        </Typography>
       </Box>
     </Box>
   );

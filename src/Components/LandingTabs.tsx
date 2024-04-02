@@ -29,7 +29,7 @@ const AntTab = styled((props: StyledTabProps) => (
   [theme.breakpoints.up("xs")]: {
     minWidth: 0,
   },
-  fontWeight: theme.typography.fontWeightRegular,
+  fontWeight: 400,
   marginRight: theme.spacing(1),
 
   color: "#B1B4BB",
@@ -40,7 +40,7 @@ const AntTab = styled((props: StyledTabProps) => (
   "&.Mui-selected": {
     color: "#fff",
     backgroundColor: "#2A3958",
-    fontWeight: theme.typography.fontWeightMedium,
+    fontWeight: 500,
   },
   "&.Mui-focusVisible": {
     backgroundColor: "#d1eaff",

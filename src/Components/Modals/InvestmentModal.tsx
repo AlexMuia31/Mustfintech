@@ -182,7 +182,16 @@ const InvestmentModals = () => {
               p: { xs: 1, sm: 2 },
             }}
           >
-            <Typography>승인거부 사유 입력</Typography>
+            <Typography
+              sx={{
+                fontSize: { sm: "18px", xs: "14px" },
+                fontFamily: "Pretendard",
+                fontWeight: 600,
+                lineHeight: "19.2px",
+              }}
+            >
+              승인거부 사유 입력
+            </Typography>
             <Image
               src="/close.png"
               alt="close"
@@ -213,7 +222,13 @@ const InvestmentModals = () => {
                 }}
               >
                 <Typography
-                  sx={{ fontSize: { md: "16px", xs: "12px" }, p: "5%" }}
+                  sx={{
+                    fontSize: { md: "16px", xs: "12px" },
+                    p: "5%",
+                    fontFamily: "Pretendard",
+                    fontWeight: 500,
+                    lineHeight: "19.2px",
+                  }}
                 >
                   회원번호
                 </Typography>
@@ -227,7 +242,16 @@ const InvestmentModals = () => {
                   borderBottom: "1px solid #D7D8DA",
                 }}
               >
-                <Typography>abc111, abc222</Typography>
+                <Typography
+                  sx={{
+                    fontFamily: "Pretendard",
+                    fontWeight: 400,
+                    lineHeight: "19.2px",
+                    fontSize: { md: "14px", xs: "12px" },
+                  }}
+                >
+                  abc111, abc222
+                </Typography>
               </Box>
             </Box>
             <Box
@@ -246,7 +270,13 @@ const InvestmentModals = () => {
                 }}
               >
                 <Typography
-                  sx={{ fontSize: { md: "16px", xs: "12px" }, p: "5%" }}
+                  sx={{
+                    fontSize: { md: "16px", xs: "12px" },
+                    p: "5%",
+                    fontFamily: "Pretendard",
+                    fontWeight: 500,
+                    lineHeight: "19.2px",
+                  }}
                 >
                   회원명/법인명
                 </Typography>
@@ -260,7 +290,16 @@ const InvestmentModals = () => {
                   borderBottom: "1px solid #D7D8DA",
                 }}
               >
-                <Typography>abc111, abc222</Typography>
+                <Typography
+                  sx={{
+                    fontFamily: "Pretendard",
+                    fontWeight: 500,
+                    lineHeight: "19.2px",
+                    fontSize: { md: "14px", xs: "12px" },
+                  }}
+                >
+                  김길동, ㈜가나다라투자
+                </Typography>
               </Box>
             </Box>
             <Box sx={{ display: "flex", pr: 2 }}>
@@ -274,7 +313,13 @@ const InvestmentModals = () => {
                 }}
               >
                 <Typography
-                  sx={{ fontSize: { md: "16px", xs: "12px" }, p: "5%" }}
+                  sx={{
+                    fontSize: { md: "16px", xs: "12px" },
+                    p: "5%",
+                    fontFamily: "Pretendard",
+                    fontWeight: 500,
+                    lineHeight: "19.2px",
+                  }}
                 >
                   승인거부 사유 <span style={{ color: "red" }}>*</span>
                 </Typography>
@@ -290,6 +335,9 @@ const InvestmentModals = () => {
                     sx={{
                       ".MuiFormControlLabel-label": {
                         fontSize: { sm: "14px", xs: "11px" },
+                        fontFamily: "Pretendard",
+                        fontWeight: 500,
+                        lineHeight: "16.71px",
                       },
                     }}
                     control={<Checkbox defaultChecked />}
@@ -299,6 +347,9 @@ const InvestmentModals = () => {
                     sx={{
                       ".MuiFormControlLabel-label": {
                         fontSize: { sm: "14px", xs: "11px" },
+                        fontFamily: "Pretendard",
+                        fontWeight: 500,
+                        lineHeight: "16.71px",
                       },
                     }}
                     control={<Checkbox />}
@@ -308,6 +359,9 @@ const InvestmentModals = () => {
                     sx={{
                       ".MuiFormControlLabel-label": {
                         fontSize: { sm: "14px", xs: "11px" },
+                        fontFamily: "Pretendard",
+                        fontWeight: 500,
+                        lineHeight: "16.71px",
                       },
                     }}
                     control={<Checkbox />}
@@ -317,6 +371,9 @@ const InvestmentModals = () => {
                     sx={{
                       ".MuiFormControlLabel-label": {
                         fontSize: { sm: "14px", xs: "11px" },
+                        fontFamily: "Pretendard",
+                        fontWeight: 500,
+                        lineHeight: "16.71px",
                       },
                     }}
                     control={<Checkbox />}
@@ -326,6 +383,9 @@ const InvestmentModals = () => {
                     sx={{
                       ".MuiFormControlLabel-label": {
                         fontSize: { sm: "14px", xs: "11px" },
+                        fontFamily: "Pretendard",
+                        fontWeight: 500,
+                        lineHeight: "16.71px",
                       },
                     }}
                     control={<Checkbox />}
@@ -335,6 +395,9 @@ const InvestmentModals = () => {
                     sx={{
                       ".MuiFormControlLabel-label": {
                         fontSize: { sm: "14px", xs: "11px" },
+                        fontFamily: "Pretendard",
+                        fontWeight: 500,
+                        lineHeight: "16.71px",
                       },
                     }}
                     control={<Checkbox />}

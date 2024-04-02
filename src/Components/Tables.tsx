@@ -16,12 +16,20 @@ import { TablePagination } from "@mui/material";
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   borderRight: "1px solid #fff",
   borderBottom: "1px solid #fff",
+  fontFamily: "Pretendard",
+
+  color: "#222222",
   [`&.${tableCellClasses.head}`]: {
     backgroundColor: "#EBEEF3",
     color: "#222222",
+    fontSize: 16,
+    fontWeight: 600,
+    lineHeight: "16px",
   },
   [`&.${tableCellClasses.body}`]: {
     fontSize: 14,
+    fontWeight: 500,
+    lineHeight: "18px",
   },
 }));
 

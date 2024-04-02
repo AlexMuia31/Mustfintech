@@ -28,5 +28,9 @@ export const CssTextField = styled(TextField)({
 });
 
 export const CssMenuItem = styled(MenuItem)({
+  fontFamily: "Pretendard",
+  fontWeight: 500,
+  lineHeight: "21px",
+  fontSize: "14px",
   "&:hover": { background: "#2A3958", color: "#fff" },
 });
