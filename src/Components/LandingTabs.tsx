@@ -138,7 +138,7 @@ const LandingTabs = () => {
                 size="small"
                 select
                 sx={{ width: "150.15px" }}
-                defaultValue="승인여부 전체"
+                placeholder="승인여부 전체"
               >
                 <CssMenuItem value="1" sx={{}}>
                   승인여부 전체
@@ -208,7 +208,21 @@ const LandingTabs = () => {
           <Tables />
         </CustomTabPanel>
         <CustomTabPanel value={value} index={2}>
-          Item Three
+          <Box
+            sx={{
+              height: "100vh",
+              background: "#fff",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <Typography
+              sx={{ color: "#A1A1A1", fontSize: "18px", lineHeight: "16px" }}
+            >
+              조회 결과가 없습니다.
+            </Typography>
+          </Box>
         </CustomTabPanel>
       </Box>
     </Box>
