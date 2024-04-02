@@ -119,12 +119,19 @@ const LandingTabs = () => {
                 md: "20px",
                 sm: "15px",
                 color: "#0B101A",
+              }}
+              sx={{
+                fontFamily: "Pretendard",
                 fontWeight: 600,
+                lineHeight: "28px",
               }}
             >
               신청 목록{" "}
-              <span style={{ color: "#5A616A", fontWeight: 500 }}>
-                (총 100명 | 승인대기 1건)
+              <span
+                style={{ color: "#5A616A", fontWeight: 500, fontSize: "14px" }}
+              >
+                (총 100명 | 승인대기 <span style={{ color: "#FF4D4F" }}>1</span>
+                건)
               </span>
             </Typography>
             <Box
@@ -183,7 +190,16 @@ const LandingTabs = () => {
           >
             <InvestmentModals />
             <Box sx={{ display: "flex", alignItems: "center" }}>
-              <Typography sx={{ color: "#5A616A", mr: "17px" }}>
+              <Typography
+                sx={{
+                  color: "#5A616A",
+                  mr: "17px",
+                  fontFamily: "Pretendard",
+                  fontWeight: 500,
+                  lineHeight: "16.71px",
+                  fontSize: "14px",
+                }}
+              >
                 선택한 0건
               </Typography>
               <Box sx={{ display: "flex", gap: 1 }}>
@@ -218,7 +234,13 @@ const LandingTabs = () => {
             }}
           >
             <Typography
-              sx={{ color: "#A1A1A1", fontSize: "18px", lineHeight: "16px" }}
+              sx={{
+                color: "#A1A1A1",
+                fontSize: "18px",
+                lineHeight: "16px",
+                fontFamily: "Pretendard",
+                fontWeight: 600,
+              }}
             >
               조회 결과가 없습니다.
             </Typography>
