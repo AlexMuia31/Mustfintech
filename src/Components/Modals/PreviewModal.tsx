@@ -8,6 +8,7 @@ import FormControlLabel from "@mui/material/FormControlLabel";
 import Checkbox from "@mui/material/Checkbox";
 import { CssTextField } from "../CustomInputs";
 import TableChip from "../TableChip";
+import Carousel from "../Carousel";
 
 const style = {
   position: "absolute" as "absolute",
@@ -35,7 +36,7 @@ function ChildModal() {
         onClick={handleOpen}
         sx={{ width: { sm: "160px", xs: "80px" } }}
       >
-        저장
+        확인
       </CustomButton>
       <Modal
         open={open}
@@ -104,7 +105,7 @@ function ChildModal2() {
         variant="outlined"
         sx={{ width: { sm: "160px", xs: "80px" } }}
       >
-        취소
+        파일 다운로드
       </WhiteButton>
       <Modal
         open={open}
@@ -112,7 +113,13 @@ function ChildModal2() {
         aria-labelledby="child-modal-title"
         aria-describedby="child-modal-description"
       >
-        <Box sx={{ ...style, width: { sm: 400, xs: 280 }, p: "1%" }}>
+        <Box
+          sx={{
+            ...style,
+            width: { sm: 400, xs: 280 },
+            p: "1%",
+          }}
+        >
           <Box
             sx={{
               display: "flex",
@@ -196,7 +203,7 @@ const PreviewModal = () => {
               p: { xs: 1, sm: 2 },
             }}
           >
-            <Typography>승인거부 사유 입력</Typography>
+            <Typography>서류 보기</Typography>
             <Image
               src="/close.png"
               alt="close"
@@ -210,73 +217,9 @@ const PreviewModal = () => {
             sx={{
               m: "24px 24px 24px 24px",
               border: "1px solid #D7D8DA",
+              borderRadius: "10px",
             }}
           >
-            <Box
-              sx={{
-                display: "flex",
-                height: { sm: "49px", xs: "42px" },
-              }}
-            >
-              <Box
-                sx={{
-                  background: "#EEF0F4",
-                  width: { sm: "160px", xs: "100px" },
-                  display: "flex",
-                  alignItems: "center",
-                }}
-              >
-                <Typography
-                  sx={{ fontSize: { md: "16px", xs: "12px" }, p: "5%" }}
-                >
-                  회원번호
-                </Typography>
-              </Box>
-              <Box
-                sx={{
-                  display: "flex",
-                  alignItems: "center",
-                  width: { sm: "592px", xs: "100%" },
-                  pl: { sm: 2, xs: 1 },
-                  borderBottom: "1px solid #D7D8DA",
-                }}
-              >
-                <Typography>abc111, abc222</Typography>
-              </Box>
-            </Box>
-            <Box
-              sx={{
-                display: "flex",
-                height: { sm: "49px", xs: "42px" },
-              }}
-            >
-              <Box
-                sx={{
-                  background: "#EEF0F4",
-                  width: { sm: "160px", xs: "100px" },
-                  display: "flex",
-                  alignItems: "center",
-                  borderTop: "1px solid #fff",
-                }}
-              >
-                <Typography
-                  sx={{ fontSize: { md: "16px", xs: "12px" }, p: "5%" }}
-                >
-                  회원명/법인명
-                </Typography>
-              </Box>
-              <Box
-                sx={{
-                  display: "flex",
-                  alignItems: "center",
-                  width: { sm: "592px", xs: "100%" },
-                  pl: { sm: 2, xs: 1 },
-                  borderBottom: "1px solid #D7D8DA",
-                }}
-              >
-                <Typography>abc111, abc222</Typography>
-              </Box>
-            </Box>
             <Box sx={{ display: "flex", pr: 2 }}>
               <Box
                 sx={{
@@ -290,83 +233,20 @@ const PreviewModal = () => {
                 <Typography
                   sx={{ fontSize: { md: "16px", xs: "12px" }, p: "5%" }}
                 >
-                  승인거부 사유 <span style={{ color: "red" }}>*</span>
+                  서류 <span style={{ color: "red" }}>*</span>
                 </Typography>
               </Box>
               <Box
                 sx={{
-                  width: { sm: "592px", xs: "100%" },
+                  width: { sm: "592px", xs: "350px" },
                   pl: { sm: 2, xs: 1 },
+                  pt: { sm: 2, xs: 1 },
+                  height: { sm: "719px", xs: "400px" },
+                  overflowY: "scroll",
+                  overflowX: "hidden",
                 }}
               >
-                <FormGroup>
-                  <FormControlLabel
-                    sx={{
-                      ".MuiFormControlLabel-label": {
-                        fontSize: { sm: "14px", xs: "11px" },
-                      },
-                    }}
-                    control={<Checkbox defaultChecked />}
-                    label="서류 식별 불가"
-                  />
-                  <FormControlLabel
-                    sx={{
-                      ".MuiFormControlLabel-label": {
-                        fontSize: { sm: "14px", xs: "11px" },
-                      },
-                    }}
-                    control={<Checkbox />}
-                    label="필수 서류 누락"
-                  />
-                  <FormControlLabel
-                    sx={{
-                      ".MuiFormControlLabel-label": {
-                        fontSize: { sm: "14px", xs: "11px" },
-                      },
-                    }}
-                    control={<Checkbox />}
-                    label="서류의 내용이 등록된 회원정보와 다름"
-                  />
-                  <FormControlLabel
-                    sx={{
-                      ".MuiFormControlLabel-label": {
-                        fontSize: { sm: "14px", xs: "11px" },
-                      },
-                    }}
-                    control={<Checkbox />}
-                    label="서류에 누락된 내용이 있음 (필수정보, 회사직인, 본인날인, 본인서명 등)"
-                  />
-                  <FormControlLabel
-                    sx={{
-                      ".MuiFormControlLabel-label": {
-                        fontSize: { sm: "14px", xs: "11px" },
-                      },
-                    }}
-                    control={<Checkbox />}
-                    label="서류의 유효기간이 초과됨"
-                  />
-                  <FormControlLabel
-                    sx={{
-                      ".MuiFormControlLabel-label": {
-                        fontSize: { sm: "14px", xs: "11px" },
-                      },
-                    }}
-                    control={<Checkbox />}
-                    label="직접 입력"
-                  />
-                </FormGroup>
-                <CssTextField
-                  fullWidth
-                  multiline
-                  minRows={3}
-                  sx={{
-                    mb: 2,
-                    ".MuiInputBase-root": {
-                      backgroundColor: "#DDE0E5",
-                    },
-                  }}
-                  placeholder="사유 입력"
-                />
+                <Carousel />
               </Box>
             </Box>
           </Box>
@@ -378,8 +258,8 @@ const PreviewModal = () => {
           <Box
             sx={{ display: "flex", justifyContent: "center", gap: 2, p: "2%" }}
           >
-            <ChildModal />
             <ChildModal2 />
+            <ChildModal />
           </Box>
         </Box>
       </Modal>
