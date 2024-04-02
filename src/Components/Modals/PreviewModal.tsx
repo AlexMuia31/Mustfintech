@@ -67,7 +67,15 @@ function ChildModal() {
               onClick={handleClose}
             />
           </Box>
-          <Typography fontSize={{ sm: "18px" }} mt="7px">
+          <Typography
+            fontSize={{
+              sm: "18px",
+              fontFamily: "Pretendard",
+              fontWeight: 600,
+              lineHeight: "28px",
+            }}
+            mt="7px"
+          >
             선택된 2명의 승인상태를 변경하시겠습니까?
           </Typography>
           <Box sx={{ display: "flex", justifyContent: "center", gap: 1 }}>
@@ -142,7 +150,15 @@ function ChildModal2() {
               onClick={handleClose}
             />
           </Box>
-          <Typography fontSize={{ sm: "18px" }} mt="7px">
+          <Typography
+            fontSize={{
+              sm: "18px",
+              fontFamily: "Pretendard",
+              fontWeight: 600,
+              lineHeight: "28px",
+            }}
+            mt="7px"
+          >
             저장되었습니다.
           </Typography>
           <Box sx={{ display: "flex", justifyContent: "center" }}>
@@ -184,7 +200,17 @@ const PreviewModal = () => {
           }}
           onClick={handleOpen}
         >
-          <Typography sx={{ color: "#000" }}>보기</Typography>
+          <Typography
+            sx={{
+              color: "#000",
+              fontFamily: "Pretendard",
+              fontWeight: 500,
+              lineHeight: "16.8px",
+              fontSize: "14px ",
+            }}
+          >
+            보기
+          </Typography>
         </Box>
       </Box>
 
@@ -203,7 +229,16 @@ const PreviewModal = () => {
               p: { xs: 1, sm: 2 },
             }}
           >
-            <Typography>서류 보기</Typography>
+            <Typography
+              sx={{
+                fontFamily: "Pretendard",
+                fontWeight: 500,
+                lineHeight: "16.71px",
+                fontSize: { sm: "18px", xs: "14px" },
+              }}
+            >
+              서류 보기
+            </Typography>
             <Image
               src="/close.png"
               alt="close"
@@ -231,7 +266,13 @@ const PreviewModal = () => {
                 }}
               >
                 <Typography
-                  sx={{ fontSize: { md: "16px", xs: "12px" }, p: "5%" }}
+                  sx={{
+                    fontSize: { md: "16px", xs: "12px" },
+                    p: "5%",
+                    fontFamily: "Pretendard",
+                    fontWeight: 500,
+                    lineHeight: "16.71px",
+                  }}
                 >
                   서류 <span style={{ color: "red" }}>*</span>
                 </Typography>

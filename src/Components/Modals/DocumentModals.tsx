@@ -63,7 +63,15 @@ function ChildModal() {
               onClick={handleClose}
             />
           </Box>
-          <Typography fontSize={{ sm: "18px" }} mt="7px">
+          <Typography
+            fontSize={{
+              sm: "18px",
+              fontFamily: "Pretendard",
+              fontWeight: 600,
+              lineHeight: "28px",
+            }}
+            mt="7px"
+          >
             jpg, jpeg, gif, png, pdf 파일만 등록 가능합니다.
           </Typography>
           <Box sx={{ display: "flex", justifyContent: "center" }}>
@@ -126,7 +134,15 @@ function ChildModal2() {
               onClick={handleClose}
             />
           </Box>
-          <Typography fontSize={{ sm: "18px" }} mt="7px">
+          <Typography
+            fontSize={{
+              sm: "18px",
+              fontFamily: "Pretendard",
+              fontWeight: 600,
+              lineHeight: "28px",
+            }}
+            mt="7px"
+          >
             저장되었습니다.
           </Typography>
           <Box sx={{ display: "flex", justifyContent: "center" }}>

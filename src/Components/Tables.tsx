@@ -695,7 +695,11 @@ export default function Tables() {
   return (
     <>
       <TableContainer component={Paper} elevation={0}>
-        <Table stickyHeader sx={{ minWidth: 1400 }} size="small">
+        <Table
+          stickyHeader
+          sx={{ minWidth: { md: 1400, xs: 1500 } }}
+          size="small"
+        >
           <TableHead>
             <TableRow>
               <StyledTableCell align="center">

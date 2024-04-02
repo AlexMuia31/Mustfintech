@@ -31,7 +31,16 @@ const Carousel = () => {
             height: { sm: "645px", xs: "400px" },
           }}
         >
-          <Typography textAlign="center" mt="50%">
+          <Typography
+            textAlign="center"
+            mt="50%"
+            sx={{
+              fontFamily: "Pretendard",
+              fontWeight: 500,
+              lineHeight: "23.87px",
+              fontSize: { sm: "20px", xs: "18px" },
+            }}
+          >
             img
           </Typography>
         </Box>
@@ -46,7 +55,16 @@ const Carousel = () => {
             alignItems: "center",
           }}
         >
-          <Typography textAlign="center" mt="50%">
+          <Typography
+            textAlign="center"
+            mt="50%"
+            sx={{
+              fontFamily: "Pretendard",
+              fontWeight: 500,
+              lineHeight: "23.87px",
+              fontSize: { sm: "20px", xs: "18px" },
+            }}
+          >
             img
           </Typography>
         </Box>

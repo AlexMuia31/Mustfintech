@@ -65,7 +65,15 @@ function ChildModal() {
               onClick={handleClose}
             />
           </Box>
-          <Typography fontSize={{ sm: "18px" }} mt="7px">
+          <Typography
+            fontSize={{
+              sm: "18px",
+              fontFamily: "Pretendard",
+              fontWeight: 600,
+              lineHeight: "28px",
+            }}
+            mt="7px"
+          >
             선택된 2명의 승인상태를 변경하시겠습니까?
           </Typography>
           <Box sx={{ display: "flex", justifyContent: "center", gap: 1 }}>
@@ -134,7 +142,15 @@ function ChildModal2() {
               onClick={handleClose}
             />
           </Box>
-          <Typography fontSize={{ sm: "18px" }} mt="7px">
+          <Typography
+            fontSize={{
+              sm: "18px",
+              fontFamily: "Pretendard",
+              fontWeight: 600,
+              lineHeight: "28px",
+            }}
+            mt="7px"
+          >
             저장되었습니다.
           </Typography>
           <Box sx={{ display: "flex", justifyContent: "center" }}>
