@@ -11,6 +11,7 @@ import { StyledCheck } from "./StyledCheck";
 import TableChip from "./TableChip";
 import { GreenChip, RedChip, YellowChip } from "./CustomChips";
 import PreviewModal from "./Modals/PreviewModal";
+import { TablePagination } from "@mui/material";
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   borderRight: "1px solid #fff",
@@ -91,7 +92,7 @@ const rows = [
     "김관리자"
   ),
   createData(
-    <StyledCheck />,
+    <StyledCheck sx={{}} />,
     3,
     "소득적격",
     "소득적격",
@@ -669,42 +670,77 @@ const rows = [
 ];
 
 export default function Tables() {
+  const [page, setPage] = React.useState(0);
+  const [rowsPerPage, setRowsPerPage] = React.useState(25);
+
+  const handleChangePage = (event: unknown, newPage: number) => {
+    setPage(newPage);
+  };
+
+  const handleChangeRowsPerPage = (
+    event: React.ChangeEvent<HTMLInputElement>
+  ) => {
+    setRowsPerPage(+event.target.value);
+    setPage(0);
+  };
+
   return (
-    <TableContainer component={Paper} elevation={0}>
-      <Table sx={{ minWidth: 1400 }} size="small">
-        <TableHead>
-          <TableRow>
-            <StyledTableCell align="center">
-              <StyledCheck />
-            </StyledTableCell>
-            <StyledTableCell align="center">NO</StyledTableCell>
-            <StyledTableCell align="center">기존유형</StyledTableCell>
-            <StyledTableCell align="center">신청유형</StyledTableCell>
-            <StyledTableCell align="center">제출서류</StyledTableCell>
-            <StyledTableCell align="center">신청일시</StyledTableCell>
-            <StyledTableCell align="center">승인여부</StyledTableCell>
-            <StyledTableCell align="center">승인거부 사유</StyledTableCell>
-            <StyledTableCell align="center">승인일시</StyledTableCell>
-            <StyledTableCell align="center"> 관리자</StyledTableCell>
-          </TableRow>
-        </TableHead>
-        <TableBody>
-          {rows.map((row) => (
-            <StyledTableRow key={row.name}>
-              <StyledTableCell align="center">{row.checkbox}</StyledTableCell>
-              <StyledTableCell align="center">{row.id}</StyledTableCell>
-              <StyledTableCell align="center">{row.name}</StyledTableCell>
-              <StyledTableCell align="center">{row.calories}</StyledTableCell>
-              <StyledTableCell align="center">{row.document}</StyledTableCell>
-              <StyledTableCell align="center">{row.fat}</StyledTableCell>
-              <StyledTableCell align="center">{row.carbs}</StyledTableCell>
-              <StyledTableCell align="left">{row.protein}</StyledTableCell>
-              <StyledTableCell align="center">{row.last}</StyledTableCell>
-              <StyledTableCell align="center">{row.manager}</StyledTableCell>
-            </StyledTableRow>
-          ))}
-        </TableBody>
-      </Table>
-    </TableContainer>
+    <>
+      <TableContainer component={Paper} elevation={0}>
+        <Table stickyHeader sx={{ minWidth: 1400 }} size="small">
+          <TableHead>
+            <TableRow>
+              <StyledTableCell align="center">
+                <StyledCheck />
+              </StyledTableCell>
+              <StyledTableCell align="center">NO</StyledTableCell>
+              <StyledTableCell align="center">기존유형</StyledTableCell>
+              <StyledTableCell align="center">신청유형</StyledTableCell>
+              <StyledTableCell align="center">제출서류</StyledTableCell>
+              <StyledTableCell align="center">신청일시</StyledTableCell>
+              <StyledTableCell align="center">승인여부</StyledTableCell>
+              <StyledTableCell align="center">승인거부 사유</StyledTableCell>
+              <StyledTableCell align="center">승인일시</StyledTableCell>
+              <StyledTableCell align="center"> 관리자</StyledTableCell>
+            </TableRow>
+          </TableHead>
+          <TableBody>
+            {rows
+              .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
+              .map((row) => (
+                <StyledTableRow key={row.name}>
+                  <StyledTableCell align="center">
+                    {row.checkbox}
+                  </StyledTableCell>
+                  <StyledTableCell align="center">{row.id}</StyledTableCell>
+                  <StyledTableCell align="center">{row.name}</StyledTableCell>
+                  <StyledTableCell align="center">
+                    {row.calories}
+                  </StyledTableCell>
+                  <StyledTableCell align="center">
+                    {row.document}
+                  </StyledTableCell>
+                  <StyledTableCell align="center">{row.fat}</StyledTableCell>
+                  <StyledTableCell align="center">{row.carbs}</StyledTableCell>
+                  <StyledTableCell align="left">{row.protein}</StyledTableCell>
+                  <StyledTableCell align="center">{row.last}</StyledTableCell>
+                  <StyledTableCell align="center">
+                    {row.manager}
+                  </StyledTableCell>
+                </StyledTableRow>
+              ))}
+          </TableBody>
+        </Table>
+      </TableContainer>
+      <TablePagination
+        rowsPerPageOptions={[25, 30]}
+        component="div"
+        count={rows.length}
+        rowsPerPage={rowsPerPage}
+        page={page}
+        onPageChange={handleChangePage}
+        onRowsPerPageChange={handleChangeRowsPerPage}
+      />
+    </>
   );
 }
