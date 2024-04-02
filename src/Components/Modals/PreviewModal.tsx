@@ -258,8 +258,15 @@ const PreviewModal = () => {
           <Box
             sx={{ display: "flex", justifyContent: "center", gap: 2, p: "2%" }}
           >
-            <ChildModal2 />
-            <ChildModal />
+            <WhiteButton
+              variant="outlined"
+              sx={{ width: { sm: "160px", xs: "80px" } }}
+            >
+              파일 다운로드
+            </WhiteButton>
+            <CustomButton sx={{ width: { sm: "160px", xs: "80px" } }}>
+              확인
+            </CustomButton>
           </Box>
         </Box>
       </Modal>
