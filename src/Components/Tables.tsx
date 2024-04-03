@@ -697,7 +697,7 @@ export default function Tables() {
       <TableContainer
         component={Paper}
         elevation={0}
-        sx={{ maxHeight: { md: 1000, xs: 800 } }}
+        sx={{ maxHeight: { md: 1000, xs: 850 } }}
       >
         <Table
           stickyHeader
