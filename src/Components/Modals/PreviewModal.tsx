@@ -301,11 +301,11 @@ const PreviewModal = () => {
           >
             <WhiteButton
               variant="outlined"
-              sx={{ width: { sm: "160px", xs: "80px" } }}
+              sx={{ width: { sm: "160px", xs: "140px" } }}
             >
               파일 다운로드
             </WhiteButton>
-            <CustomButton sx={{ width: { sm: "160px", xs: "80px" } }}>
+            <CustomButton sx={{ width: { sm: "160px", xs: "140px" } }}>
               확인
             </CustomButton>
           </Box>
