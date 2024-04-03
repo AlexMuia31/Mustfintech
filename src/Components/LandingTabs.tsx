@@ -13,6 +13,47 @@ import { CustomButton } from "./CustomButtons";
 import DocumentModals from "./Modals/DocumentModals";
 import InvestmentModals from "./Modals/InvestmentModal";
 
+const firstDropdown = [
+  {
+    value: "승인여부 전체",
+    label: "승인여부 전체",
+  },
+  {
+    value: "승인대기",
+    label: "승인대기",
+  },
+  {
+    value: "승인완료",
+    label: "승인완료",
+  },
+  {
+    value: "승인거부",
+    label: "승인거부",
+  },
+];
+
+const secondDropdown = [
+  {
+    value: "신청일시순",
+    label: "신청일시순",
+  },
+  {
+    value: "승인일시순",
+    label: "승인일시순",
+  },
+];
+
+const thirdDropdown = [
+  {
+    value: "승인완료",
+    label: "승인완료",
+  },
+  {
+    value: "승인거부",
+    label: "승인거부",
+  },
+];
+
 const AntTabs = styled(Tabs)({
   borderBottom: "1px solid #e8e8e8",
   background: "#EBEEF3",
@@ -146,35 +187,37 @@ const LandingTabs = () => {
                 select
                 sx={{ width: "150.15px" }}
                 placeholder="승인여부 전체"
+                defaultValue={firstDropdown[0].value}
               >
-                <CssMenuItem value="1" sx={{}}>
-                  승인여부 전체
-                </CssMenuItem>
-                <CssMenuItem value="2">승인대기</CssMenuItem>
-                <CssMenuItem value="3">승인완료</CssMenuItem>
-                <CssMenuItem value="4">승인거부</CssMenuItem>
+                {firstDropdown.map((item) => (
+                  <CssMenuItem value={item.value} key={item.value}>
+                    {item.label}
+                  </CssMenuItem>
+                ))}
               </CssTextField>
               <CssTextField
                 size="small"
                 select
                 sx={{ width: "150.15px" }}
-                defaultValue="승인여부 전체"
+                defaultValue={secondDropdown[0].value}
               >
-                <CssMenuItem value="1" sx={{}}>
-                  신청일시순
-                </CssMenuItem>
-                <CssMenuItem value="2">승인일시순</CssMenuItem>
+                {secondDropdown.map((item) => (
+                  <CssMenuItem value={item.value} key={item.value}>
+                    {item.label}
+                  </CssMenuItem>
+                ))}
               </CssTextField>
               <CssTextField
                 size="small"
                 select
                 sx={{ width: "150.15px" }}
-                defaultValue="승인여부 전체"
+                defaultValue={thirdDropdown[0].value}
               >
-                <CssMenuItem value="1" sx={{}}>
-                  승인완료
-                </CssMenuItem>
-                <CssMenuItem value="2">승인거부</CssMenuItem>
+                {thirdDropdown.map((item) => (
+                  <CssMenuItem value={item.value} key={item.value}>
+                    {item.label}
+                  </CssMenuItem>
+                ))}
               </CssTextField>
             </Box>
           </Box>
